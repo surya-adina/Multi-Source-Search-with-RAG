@@ -1,0 +1,12 @@
+streamlit
+google-generativeai
+python-dotenv
+langchain-community
+PyPDF2
+python-docx
+pandas
+openpyxl
+bs4
+faiss-cpu
+langchain_google_genai
+dotenv
