@@ -14,8 +14,6 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 import google.generativeai as genai
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-# from langchain_google_genai import ChatGoogleGenerativeAI
-# from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
 from langchain_classic.chains.question_answering import load_qa_chain
 from langchain_core.prompts import PromptTemplate
@@ -26,7 +24,6 @@ warnings.filterwarnings("ignore")
 
 # Load environment variables
 load_dotenv()
-# genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Setup logging
 LOG_FILE = "rag.log"
@@ -237,8 +234,6 @@ def get_conversational_chain():
     Question: \n{question}\n
     Answer:
     """
-    # model = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.3)
-    # llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
     llm = ChatGroq(model="llama-3.1-8b-instant",temperature=0)
     prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
     chain = load_qa_chain(llm, chain_type="stuff", prompt=prompt)
@@ -425,12 +420,6 @@ def main():
             # st.write(response)
             placeholder = st.empty()  # Placeholder for typing effect
             simulate_typing(response, placeholder, typing_speed=0.0001)
-
-    # st.markdown("""
-    #     <div style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #0E1117; padding: 15px; text-align: center;">
-    #         © <a href="https://github.com/JagadeeshAjjada" target="_blank">Jagadeesh Ajjada</a>️
-    #     </div>
-    # """, unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
