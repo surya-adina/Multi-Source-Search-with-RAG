@@ -80,7 +80,7 @@ This project streamlines multi-source knowledge access and enhances data interac
 
 ## 🚀 Live Demo
 
-👉 Click [here](doc-search-with-rag.streamlit.app) to check it out
+👉 Click [here](http://doc-search-with-rag.streamlit.app/) to check it out
 
 ---
 
