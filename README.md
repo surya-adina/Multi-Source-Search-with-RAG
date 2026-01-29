@@ -39,6 +39,7 @@
     - [Installation](#-installation)
     - [Usage](#-usage)
 - [Features](#-features)
+- [Live Demo](#-live-demo)
 - [Project Structure](#-project-structure)
     - [Project Index](#-project-index)
 - [License](#-license)
@@ -74,6 +75,12 @@ This project streamlines multi-source knowledge access and enhances data interac
 | ⚡️  | **Performance**       | <ul><li>FAISS index (`index.faiss`) for fast similarity search</li><li>Uses sentence-transformers for embedding generation</li><li>Batch processing with tqdm to optimize throughput</li></ul> |
 | 🛡️ | **Security**          | <ul><li>Uses python-dotenv for environment variable management</li><li>Potential for secure API key handling for external services</li></ul> |
 | 📦 | **Dependencies**      | <ul><li>Relies on `requirements.txt` for package management</li><li>Key dependencies include langchain, faiss-cpu, sentence-transformers, pandas, requests, and streamlit</li></ul> |
+
+---
+
+## 🚀 Live Demo
+
+👉 Click [here](doc-search-with-rag.streamlit.app) to check it out
 
 ---
 
